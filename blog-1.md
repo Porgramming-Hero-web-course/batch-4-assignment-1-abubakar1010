@@ -3,12 +3,12 @@ In TypeScript, one of the powerful features that allow us to create complex type
 
 ---
 
-### What You Will Learn
+## What You Will Learn
 	How union (|) and intersection (&) types work and when to use them
 	Practical examples where we combine multiple interfaces or types 
 	Understanding how TypeScript ensures type safety
 
-### Prerequisites
+## Prerequisites
 	Have a basic understanding of JavaScript and TypeScript.
 	Familiar with basic TypeScript features like types, interfaces, and type aliase
 
@@ -18,16 +18,14 @@ In TypeScript, one of the powerful features that allow us to create complex type
 
 Union types are used when a value can be one of several types. It's highly useful in scenarios where we want to allow multiple possible types for a value. By using the `|` operator, you create a type that represents **either of two (or more) types**. 
 
-### Syntax:
+## Syntax:
 `type score = number | number[];`
 
 In the following example, the variable score is allowed to be either a number or an array of number. The variable can hold one of the specified types, not multiple at the same time. A union type uses the** | ** operator to combine multiple types. The types in the union can be primitive types, objects, or even complex types.
 
-## Uses of uninon( | )
 
-Handling multiple types: Union types are useful when a variable can hold values of different types. For example, a function that can return either a string or number depending on a condition or parameter.
-
-##Example: Function Returning Multiple Types 
+## Example
+Function  that can return either a string or number depending on a condition or parameter.
 
 ```
 {interface User{
@@ -56,17 +54,17 @@ console.log(getData({name: "user", email: "user@example.com", verified: false}))
 In this example, the getData function returns either an object or a string, depending on the argument passed. The return type is defined as union, allowing the flexibility to return multiple types.
 
 
-### Intersection Types
+## Intersection Types
 
 An intersection type combines multiple types into one. A variable with an intersection type must satisfy all the types in the intersection. It is defined using the & operator. 
 
-### Syntax:
+## Syntax:
 
-`type SuperAdmin = User | Admin;`
+`type SuperAdmin = User & Admin;`
 
 A variable of type SuperAdmin  must have both User and Admin properties. the SuperAdmin type is an intersection of User and Admin
 
-###Example
+## Example
 In the following example, we define two interfaces, X and Y, and then create an intersection type Z that combines both X and Y. A variable of type X must have all properties of X and Y.
 
 ```
@@ -92,7 +90,7 @@ const student: Z = {
 
 In this example, the Z type is an intersection of X and Z, so the student object must contain properties from both X and Y—namely, name (a string), email (a string), subject (a string), and score (a number).
 
-### Use Cases for Union and Intersection Types
+## Use Cases for Union and Intersection Types
 
 ###### Union Type
 - Union types are useful when a variable can hold values of different types. 
