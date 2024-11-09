@@ -1,4 +1,4 @@
-# Understanding Union and Intersection Types in TypeScript
+# The significance of union and intersection types in Typescript.
 In TypeScript, one of the powerful features that allow us to create complex types are **union** and **intersection types**.that allow us to create flexible, expressive types for more robust and maintainable code. Understanding these types and knowing when to use each can significantly enhance how we work with TypeScript. This article will delve into the practical use of these advanced types, with examples that you can try out in the <a href="https://www.typescriptlang.org/play/" target="_blank">TypeScript Playground</a>
 
 ---
@@ -16,12 +16,12 @@ In TypeScript, one of the powerful features that allow us to create complex type
 
 ## Union Types
 
-Union types are used when a value can be one of several types Union types highly useful in scenarios where we want to allow multiple possible types for a value. By using the `|` operator, you create a type that represents **either of two (or more) types**. 
+Union types are used when a value can be one of several types. It's highly useful in scenarios where we want to allow multiple possible types for a value. By using the `|` operator, you create a type that represents **either of two (or more) types**. 
 
 ### Syntax:
 `type score = number | number[];`
 
-In the following example, the variable score is allowed to be either a number or an array of number. The variable can hold one of the specified types, not multiple at the same time. A union type uses the** | ** operator to combine multiple types.The types in the union can be primitive types, objects, or even complex types.
+In the following example, the variable score is allowed to be either a number or an array of number. The variable can hold one of the specified types, not multiple at the same time. A union type uses the** | ** operator to combine multiple types. The types in the union can be primitive types, objects, or even complex types.
 
 ## Uses of uninon( | )
 
@@ -53,7 +53,7 @@ console.log(getData({name: "user", email: "user@example.com", verified: false}))
 }
 ```
 
-In this example, the getData function returns either a object or a string, depending on the argument passed. The return type is defined as union, allowing the flexibility to return multiple types.
+In this example, the getData function returns either an object or a string, depending on the argument passed. The return type is defined as union, allowing the flexibility to return multiple types.
 
 
 ###Intersection Types
@@ -88,14 +88,14 @@ const student: Z = {
 }
 ```
 
-In this example, the Z type is an intersection of X and Z, so the student object must contain properties from both X and Y—namely, name (a string), email (a string), subject (a string) and score (a number).
+In this example, the Z type is an intersection of X and Z, so the student object must contain properties from both X and Y—namely, name (a string), email (a string), subject (a string), and score (a number).
 
 ### Use Cases for Union and Intersection Types
 
 ###### Union Type
 - Union types are useful when a variable can hold values of different types. 
 -  Union types make API functions more flexible by allowing parameters or return types to accept more than one possible type
-- Union types often used for handling optional data or when multiple types are valid.
+- Union type is often used for handling optional data or when multiple types are valid.
 
 ###### Intersection Type
 - An intersection type is used when you want a variable to be a combination of multiple types. It requires the value to satisfy all conditions and properties of the intersected types.
