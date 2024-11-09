@@ -56,10 +56,12 @@ console.log(getData({name: "user", email: "user@example.com", verified: false}))
 In this example, the getData function returns either an object or a string, depending on the argument passed. The return type is defined as union, allowing the flexibility to return multiple types.
 
 
-###Intersection Types
+### Intersection Types
+
 An intersection type combines multiple types into one. A variable with an intersection type must satisfy all the types in the intersection. It is defined using the & operator. 
 
 ### Syntax:
+
 `type SuperAdmin = User | Admin;`
 
 A variable of type SuperAdmin  must have both User and Admin properties. the SuperAdmin type is an intersection of User and Admin
